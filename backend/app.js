@@ -33,8 +33,6 @@ staticDirectories.forEach((directory) => {
   );
 });
 
-
-
 app.use("/", loader_router);
 
 app.listen(port, () => {
