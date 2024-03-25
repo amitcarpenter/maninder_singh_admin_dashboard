@@ -4,6 +4,12 @@ const express = require("express");
 const path = require("path");
 const cors = require("cors");
 const loader_router = require("./routes/loaderRoutes");
+
+
+const port = process.env.PORT;
+
+const app = express();
+
 const staticDirectories = [
   "css",
   "docs",
@@ -15,11 +21,6 @@ const staticDirectories = [
   "scss",
   "vendors",
 ];
-
-const port = process.env.PORT;
-
-const app = express();
-
 // Set Engine
 app.set("view engine", "ejs");
 app.set("views", path.join(__dirname, "../frontend"));
