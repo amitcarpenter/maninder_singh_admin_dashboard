@@ -19,6 +19,7 @@ const {
   brokerage_create_page_loader,
   precondo_page_loader,
   precondo_create_page_loader,
+  edit_blog_page_loader,
 } = require("../controllers/loaderController");
 
 const loader_router = express.Router();
@@ -36,6 +37,8 @@ loader_router.get("/about", about_page_loader);
 loader_router.get("/blog", blog_page_loader);
 
 loader_router.get("/blog-create", create_blog_page_loader);
+
+loader_router.get("/blog-edit/:id", edit_blog_page_loader);
 
 loader_router.get("/setting", setting_page_loader);
 

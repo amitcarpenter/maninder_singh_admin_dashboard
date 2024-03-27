@@ -25,6 +25,10 @@ const create_blog_page_loader = async (req, res) => {
   res.render("pages/blog/createBlog.ejs");
 };
 
+const edit_blog_page_loader = async (req, res) => {
+  res.render("pages/blog/editBlog.ejs");
+};
+
 const setting_page_loader = async (req, res) => {
   res.render("pages/setting/setting.ejs");
 };
@@ -93,4 +97,5 @@ module.exports = {
   brokerage_create_page_loader,
   precondo_page_loader,
   precondo_create_page_loader,
+  edit_blog_page_loader,
 };
