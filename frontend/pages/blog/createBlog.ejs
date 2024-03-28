@@ -307,36 +307,6 @@
     </script>
 
     <!-- Create Blog -->
-    <!-- <script>
-      $(document).ready(function () {
-        $("#submitBtn").on("click", function () {
-          var form = $("#blogForm")[0];
-          var formData = new FormData(form);
-
-          console.log(formData, "formdata");
-
-          $.ajax({
-            type: "POST",
-            enctype: "multipart/form-data",
-            url: "https://backend.artechworld.tech/api/admin/blog/create",
-            data: formData,
-            processData: false,
-            contentType: false,
-            cache: false,
-            success: function (response) {
-              alert("Blog post saved successfully");
-              console.log(response);
-              // Redirect or do something on success
-            },
-            error: function (error) {
-              alert("Error saving blog post");
-              console.error("Error saving blog post:", error);
-            },
-          });
-        });
-      });
-    </script> -->
-
     <script>
       $(document).ready(function () {
         $("#submitBtn").on("click", function (event) {
@@ -360,7 +330,7 @@
             success: function (response) {
               alert("Blog post saved successfully");
               console.log(response);
-              // Redirect or do something on success
+              window.location.href = "/blog";
             },
             error: function (error) {
               alert("Error saving blog post");

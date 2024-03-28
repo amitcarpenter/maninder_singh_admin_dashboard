@@ -306,37 +306,7 @@
       });
     </script>
 
-    <!-- Create Blog -->
-    <!-- <script>
-      $(document).ready(function () {
-        $("#submitBtn").on("click", function () {
-          var form = $("#blogForm")[0];
-          var formData = new FormData(form);
-
-          console.log(formData, "formdata");
-
-          $.ajax({
-            type: "POST",
-            enctype: "multipart/form-data",
-            url: "https://backend.artechworld.tech/api/admin/blog/create",
-            data: formData,
-            processData: false,
-            contentType: false,
-            cache: false,
-            success: function (response) {
-              alert("Blog post saved successfully");
-              console.log(response);
-              // Redirect or do something on success
-            },
-            error: function (error) {
-              alert("Error saving blog post");
-              console.error("Error saving blog post:", error);
-            },
-          });
-        });
-      });
-    </script> -->
-
+    <!-- create blog -->
     <script>
       $(document).ready(function () {
         $("#submitBtn").on("click", function (event) {
@@ -558,52 +528,5 @@
       integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shCv+A+nA/1Q9wbIhev2Lw0P3ZYLaV8OELbK+"
       crossorigin="anonymous"
     ></script>
-    <script>
-      $(document).ready(function () {
-        // Function to fetch blog post details
-        function fetchBlogPostDetails(postId) {
-          $.get(
-            `https://backend.artechworld.tech/api/blog/${postId}`,
-            function (data) {
-              if (data.status && data.data) {
-                const post = data.data;
-
-                // Populate form fields with retrieved data
-                $("#title").val(post.title);
-                $("#category-dropdown").val(post.category); // Assuming you have category dropdown options populated
-                $("#author").val(post.author);
-                $("#description").val(post.authorBio);
-                $("#content").val(post.content);
-
-                // You might need to handle cover photo separately if it's not returned in the post object
-
-                // Initialize Summernote for content field after populating data
-                $(".textarea").summernote({
-                  height: 300,
-                });
-              } else {
-                console.error(
-                  "Failed to fetch blog post details:",
-                  data.message
-                );
-                // Handle error case
-              }
-            }
-          );
-        }
-
-        // Fetch blog post details when page loads
-        const urlParams = new URLSearchParams(window.location.search);
-        const postId = urlParams.get("id"); // Assuming you're passing the post id through query parameter
-        if (postId) {
-          fetchBlogPostDetails(postId);
-        } else {
-          console.error("No post id provided in URL");
-          // Handle case when no post id is provided
-        }
-
-        // Rest of your JavaScript code...
-      });
-    </script>
   </body>
 </html>
