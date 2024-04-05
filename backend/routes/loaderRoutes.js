@@ -20,6 +20,8 @@ const {
   precondo_page_loader,
   precondo_create_page_loader,
   edit_blog_page_loader,
+  exclusive_list_page_loader,
+  exclusive_create_page_loader,
 } = require("../controllers/loaderController");
 
 const loader_router = express.Router();
@@ -66,5 +68,9 @@ loader_router.get("/brokerage-create", brokerage_create_page_loader);
 loader_router.get("/precondo", precondo_page_loader);
 
 loader_router.get("/precondo-create", precondo_create_page_loader);
+
+loader_router.get("/exclusive-create", exclusive_create_page_loader);
+
+loader_router.get("/exclusive", exclusive_list_page_loader);
 
 module.exports = loader_router;

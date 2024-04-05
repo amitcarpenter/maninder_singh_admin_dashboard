@@ -77,6 +77,14 @@ const precondo_create_page_loader = async (req, res) => {
   res.render("pages/precondo/precondo-create.ejs");
 };
 
+const exclusive_create_page_loader = async (req, res) => {
+  res.render("pages/exclusive_listing/exclusive_create.ejs");
+};
+
+const exclusive_list_page_loader = async (req, res) => {
+  res.render("pages/exclusive_listing/exclusivelist.ejs");
+};
+
 module.exports = {
   dashbaord_loader,
   about_page_loader,
@@ -98,4 +106,6 @@ module.exports = {
   precondo_page_loader,
   precondo_create_page_loader,
   edit_blog_page_loader,
+  exclusive_list_page_loader,
+  exclusive_create_page_loader,
 };
