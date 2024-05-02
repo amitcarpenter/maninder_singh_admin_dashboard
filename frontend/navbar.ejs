@@ -24,7 +24,7 @@
         <div class="input-group">
           <div class="input-group-prepend hover-cursor" id="navbar-search-icon">
             <span class="input-group-text" id="search">
-              <a href="https://manindar.artechworld.tech/" target="_blank"
+              <a href="https://maninderrealestate.com/" target="_blank"
                 >Main website</a
               >
             </span>
@@ -46,11 +46,11 @@
           class="dropdown-menu dropdown-menu-right navbar-dropdown"
           aria-labelledby="profileDropdown"
         >
-          <a href="/setting" class="dropdown-item">
+          <!-- <a href="/setting" class="dropdown-item">
             <i class="ti-settings text-primary"></i>
             Settings
-          </a>
-          <a href="/logout" class="dropdown-item">
+          </a> -->
+          <a  class="dropdown-item" onclick="logout()">
             <i class="ti-power-off text-primary"></i>
             Logout
           </a>
@@ -66,3 +66,12 @@
     </button>
   </div>
 </nav>
+
+<!-- Handle Logout -->
+<script>
+  function logout() {
+    localStorage.removeItem("accessToken");
+    sessionStorage.removeItem("accessToken");
+    window.location.href = "/login";
+  }
+</script>

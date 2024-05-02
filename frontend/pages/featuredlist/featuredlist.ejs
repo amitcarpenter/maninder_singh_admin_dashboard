@@ -28,11 +28,11 @@
                             <div class="d-flex justify-content-between">
                               <h3 class="card-title">Propertys Details</h3>
                               <div class="d-flex justify-content-between">
-                                <a
+                                <!-- <a
                                   href="/property-create"
                                   class="btn btn-primary btn-sm mr-2"
                                   >Add new</a
-                                >
+                                > -->
                               </div>
                             </div>
                           </div>
@@ -181,7 +181,6 @@
     </div>
     <%- include('../../foot') %>
 
-
     <!-- Property Listing -->
     <script>
       function deleteproperty(propertyId, row) {
@@ -189,7 +188,7 @@
           $.ajax({
             url: `https://backend.artechworld.tech/api/admin/property/delete/${propertyId}`,
             type: "DELETE",
-            success: function (result) {  
+            success: function (result) {
               alert("property deleted successfully.");
               row.remove();
             },
@@ -222,12 +221,12 @@
                             </a>
                           </td>
 
-                          <td>${property["MLS® Num:"]}</td>
-                          <td>${property["alt-addr"]}</td>
-                          <td>${property["mrp-listing-price-container"]}</td>
-                          <td>${property["Bedrooms:"]}</td>
-                          <td>${property["Bathrooms:"]}</td>
-                          <td>${property["summary-property-type"]}</td>
+                          <td>${property.mls_number}</td>
+                          <td>${property.address}</td>
+                          <td>${property.price}</td>
+                          <td>${property.bedrooms}</td>
+                          <td>${property.bathrooms}</td>
+                          <td>${property.additional_details ? property.additional_details.Building_Type : 'None'}</td>
                           <td>
                               <a href="#" onclick="deleteproperty('${
                                 property._id

@@ -36,3 +36,16 @@
     src="https://cdn.datatables.net/1.11.5/js/jquery.dataTables.js"
   ></script>
 </head>
+
+
+
+    <!-- functionality for the accdess fo the user  -->
+    <script>
+      const accessToken =
+        localStorage.getItem("accessToken") ||
+        sessionStorage.getItem("accessToken");
+
+      if (!accessToken) {
+        window.location.href = "/login";
+      }
+    </script>
