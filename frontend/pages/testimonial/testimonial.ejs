@@ -142,7 +142,7 @@
       function deletetestimonial(testimonialId, row) {
         if (confirm("Are you sure you want to delete this testimonial?")) {
           $.ajax({
-            url: `https://backend.artechworld.tech/api/admin/testimonials/delete/${testimonialId}`,
+            url: `https://api.maninderrealestate.com/api/admin/testimonials/delete/${testimonialId}`,
             type: "DELETE",
             success: function (result) {
               alert("testimonial deleted successfully.");
@@ -159,7 +159,7 @@
       $(document).ready(function () {
         // Fetch data from the API
         $.get(
-          "https://backend.artechworld.tech/api/testimonials/all",
+          "https://api.maninderrealestate.com/api/testimonials/all",
           function (data) {
             if (data.data && data.data.length > 0) {
               data.data.forEach(function (testimonial, index) {

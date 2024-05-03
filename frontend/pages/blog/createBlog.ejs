@@ -322,7 +322,7 @@
           $.ajax({
             type: "POST",
             enctype: "multipart/form-data",
-            url: "https://backend.artechworld.tech/api/admin/blog/create",
+            url: "https://api.maninderrealestate.com/api/admin/blog/create",
             data: formData,
             processData: false,
             contentType: false,
@@ -345,7 +345,7 @@
     <script>
       function fetchCategories() {
         fetch(
-          "https://backend.artechworld.tech/api/admin/blog/category/list-all"
+          "https://api.maninderrealestate.com/api/admin/blog/category/list-all"
         )
           .then((response) => response.json())
           .then((data) => {
@@ -410,7 +410,7 @@
     <script>
       function addCategory(categoryName) {
         fetch(
-          "https://backend.artechworld.tech/api/admin/blog/category/create",
+          "https://api.maninderrealestate.com/api/admin/blog/category/create",
           {
             method: "POST",
             headers: {
@@ -451,7 +451,7 @@
     <script>
       function fetchCategoriesForDeletion() {
         fetch(
-          "https://backend.artechworld.tech/api/admin/blog/category/list-all"
+          "https://api.maninderrealestate.com/api/admin/blog/category/list-all"
         )
           .then((response) => response.json())
           .then((data) => {
@@ -478,7 +478,7 @@
       async function deleteCategory(categoryIdToDelete) {
         try {
           const response = await fetch(
-            `https://backend.artechworld.tech/api/admin/blog/category/delete/${categoryIdToDelete}`,
+            `https://api.maninderrealestate.com/api/admin/blog/category/delete/${categoryIdToDelete}`,
             {
               method: "DELETE",
               headers: {

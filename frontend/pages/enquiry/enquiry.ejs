@@ -126,7 +126,7 @@
       function deleteContact(contactId, row) {
         if (confirm("Are you sure you want to delete this contact?")) {
           $.ajax({
-            url: `https://backend.artechworld.tech/api/admin/contact/delete/${contactId}`,
+            url: `https://api.maninderrealestate.com/api/admin/contact/delete/${contactId}`,
             type: "DELETE",
             success: function (result) {
               alert("Contact deleted successfully.");
@@ -141,7 +141,7 @@
 
       $(document).ready(function () {
         $.get(
-          "https://backend.artechworld.tech/api/admin/contact/list-all",
+          "https://api.maninderrealestate.com/api/admin/contact/list-all",
           function (data) {
             if (data.data && data.data.length > 0) {
               data.data.forEach(function (contact, index) {

@@ -161,7 +161,6 @@
 
     <%- include('../../foot') %>
 
-
     <!-- Create Exclusive listing -->
     <script>
       $(document).ready(function () {
@@ -178,7 +177,7 @@
           $.ajax({
             type: "POST",
             enctype: "multipart/form-data",
-            url: "https://backend.artechworld.tech/api/admin/exclusive/create",
+            url: "https://api.maninderrealestate.com/api/admin/exclusive/create",
             data: formData,
             processData: false,
             contentType: false,

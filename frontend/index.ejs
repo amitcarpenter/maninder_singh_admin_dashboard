@@ -78,7 +78,7 @@
       fetchTemperature();
       setInterval(fetchTemperature, 3600000);
 
-      fetch("https://backend.artechworld.tech/api/admin/dashboard/details")
+      fetch("https://api.maninderrealestate.com/api/admin/dashboard/details")
         .then((response) => response.json())
         .then((data) => {
           const dashboardData = document.getElementById("dashboardData");

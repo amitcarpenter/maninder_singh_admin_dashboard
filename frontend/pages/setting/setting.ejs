@@ -16,7 +16,7 @@
                   </div>
                   <form
                     method="PUT"
-                    action="https://backend.artechworld.tech/api/admin/settings/update/660932154f99745524b38908"
+                    action="https://api.maninderrealestate.com/api/admin/settings/update/660932154f99745524b38908"
                     id="settingsForm"
                   >
                     <!-- <input type="hidden" name="_token" value="" /> -->
@@ -259,7 +259,7 @@
           };
 
           fetch(
-            "https://backend.artechworld.tech/api/admin/settings/update/660932154f99745524b38908",
+            "https://api.maninderrealestate.com/api/admin/settings/update/660932154f99745524b38908",
             {
               method: "PUT",
               headers: {
@@ -289,7 +289,7 @@
     <script>
       function populateFormFields() {
         fetch(
-          "https://backend.artechworld.tech/api/admin/settings/660932154f99745524b38908"
+          "https://api.maninderrealestate.com/api/admin/settings/660932154f99745524b38908"
         )
           .then((response) => response.json())
           .then((half) => {
